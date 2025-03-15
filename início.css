@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Well</title>
-    <link rel="shortcut icon" type="image/jpg" href="image/studyandbed.png"/>
 
-  
-
-    <style>
         body {
             font-family: Arial, sans-serif;
             background-color:#48026a93;
@@ -51,27 +41,7 @@
             }
         }
 
-    </style>
-</head>
-<body>
-    <div class="menu">
-        <a href="Aula1-2.html" target="_self">Início</a>
-        <a href="Sobre.html" target="_self">Sobre</a>
-        <a href="Contato.html" target="_self">Contato</a>
-
-    </div>
-    <div class="container">
-        <h1>Bem-vindo ao Site de Foco e Relaxamento!</h1>
-        <p>Logo abaixo você poderá encontrar musicas que te ajudem focar nos estudos.</p>
-    </div>  
-
-
-</body>
-
-<body>
-    <style>
-    
-
+        
         .musicas {
             display: flex;
             flex-wrap: wrap;
@@ -96,25 +66,7 @@
             }
         }
 
-    </style>
-    <div class="musicas">
-        <div class="item">  <p>SONS DE CHUVA:</p>
-                <audio controls loop>
-                    <source src="https://www.soundjay.com/nature/rain-01.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-        
-
-        <div class="item"> <p>SONS DO OCEANO:</p>
-                <audio controls loop>
-                    <source src="https://www.soundjay.com/nature/ocean-wave-1.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-    </div>
     
-    
-    <body>
-        <style>
     .timer {
     position: fixed;
     left: 10px;
@@ -143,41 +95,3 @@
     }
 
 }
-    </style>
-   <div class="timer">
-    <span id="tempo"> <h5>Cronômetro para estudo:</h5>
-        00:00:00</span><br>
-    <button onclick="iniciar()">Iniciar</button>
-    <button onclick="pausar()">Pausar</button>
-    <button onclick="resetar()">Resetar</button>
-</div>
-
-<script>
-    let [seg, min, hr] = [0, 0, 0], intervalo, rodando = false;
-
-    const atualizarTempo = () => 
-        document.getElementById('tempo').textContent = 
-        `${String(hr).padStart(2, '0')}:${String(min).padStart(2, '0')}:${String(seg).padStart(2, '0')}`;
-
-    const iniciar = () => {
-        if (rodando) return;
-        rodando = true;
-        intervalo = setInterval(() => {
-            if (++seg === 60) (seg = 0, ++min);
-            if (min === 60) (min = 0, ++hr);
-            atualizarTempo();
-        }, 1000);
-    };
-
-    const pausar = () => (clearInterval(intervalo), rodando = false);
-    
-    const resetar = () => {
-        [seg, min, hr, rodando] = [0, 0, 0, false];
-        clearInterval(intervalo);
-        atualizarTempo();
-    };
-</script>
-
-    
-</body>
-</html>
