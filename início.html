@@ -33,44 +33,14 @@
                 </audio>
             </div>
     </div>
-</body>
 
-<body>
-    
     <div class="timer">
         <span id="tempo"> <h5>Cronômetro para estudo:</h5>
             00:00:00</span><br>
         <button onclick="iniciar()">Iniciar</button>
         <button onclick="pausar()">Pausar</button>
         <button onclick="resetar()">Resetar</button>
-    </div>
-    
-    <script>
-        let [seg, min, hr] = [0, 0, 0], intervalo, rodando = false;
-    
-        const atualizarTempo = () => 
-            document.getElementById('tempo').textContent = 
-            `${String(hr).padStart(2, '0')}:${String(min).padStart(2, '0')}:${String(seg).padStart(2, '0')}`;
-    
-        const iniciar = () => {
-            if (rodando) return;
-            rodando = true;
-            intervalo = setInterval(() => {
-                if (++seg === 60) (seg = 0, ++min);
-                if (min === 60) (min = 0, ++hr);
-                atualizarTempo();
-            }, 1000);
-        };
-    
-        const pausar = () => (clearInterval(intervalo), rodando = false);
+        </div>
         
-        const resetar = () => {
-            [seg, min, hr, rodando] = [0, 0, 0, false];
-            clearInterval(intervalo);
-            atualizarTempo();
-        };
-</script>
-
-    
 </body>
 </html>
