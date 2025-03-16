@@ -1,23 +1,44 @@
-let [seg, min, hr] = [0, 0, 0], intervalo, rodando = false;
+var segundo=0
+var minuto=0
+var hora=0
 
-const atualizarTempo = () => 
-    document.getElementById('tempo').textContent = 
-    `${String(hr).padStart(2, '0')}:${String(min).padStart(2, '0')}:${String(seg).padStart(2, '0')}`;
+var interval
 
-const iniciar = () => {
-    if (rodando) return;
-    rodando = true;
-    intervalo = setInterval(() => {
-        if (++seg === 60) (seg = 0, ++min);
-        if (min === 60) (min = 0, ++hr);
-        atualizarTempo();
-    }, 1000);
-};
+function doisdigitos(digit){
+    if(digit<10){
+        return('0')+digit
+    }else{
+        return(digit)
+    }
 
-const pausar = () => (clearInterval(intervalo), rodando = false);
+}
 
-const resetar = () => {
-    [seg, min, hr, rodando] = [0, 0, 0, false];
-    clearInterval(intervalo);
-    atualizarTempo();
-};
+function iniciar(){
+    cronometro()
+interval= setInterval(cronometro,1000)
+}
+
+function pausar(){
+clearInterval(interval)
+}
+
+function resetar(){
+clearInterval(interval)
+segundo=0
+minuto=0
+document.getElementById('cronometro').innerText='00:00:00'
+}
+
+function cronometro(){
+    segundo++
+    if(segundo==60){
+        minuto++
+        segundo=0
+        if(minuto==60){
+            minuto=0
+            hora++
+        }
+    }
+
+document.getElementById('cronometro').innerText=doisdigitos(hora)+':'+doisdigitos(minuto)+':'+doisdigitos(segundo);
+}

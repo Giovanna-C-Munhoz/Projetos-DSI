@@ -14,6 +14,27 @@
             position: relative;
             
         }
+
+        button:hover{
+            cursor:pointer
+        }
+
+        .iniciar { 
+            background: #f484f8; color: white; 
+            border: none
+
+        }
+        .pausar {
+            background: #af1bd0; color: white; 
+            border:none
+            
+        }
+        
+        .resetar {
+             background: #660277; color: white; 
+             border: none
+        }
+
         .container {
             width: 100%;
             max-width: 800px; 
@@ -82,10 +103,6 @@
     transition: transform 0.6s ease-in-out, top 0.1s ease-in-out;
 }
 
-    
-.iniciar { background: #f484f8; color: white; }
-        .pausar { background: #af1bd0; color: white; }
-        .resetar { background: #660277; color: white; }
 
 @media (max-width: 768px) {
     .timer {
