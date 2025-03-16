@@ -14,6 +14,7 @@
                 width: 100%;
             }
         }
+
         body {
             font-family: Arial, sans-serif;
             background-color:#48026a93;
@@ -28,7 +29,7 @@
         }
         .container {
             width: 100%;
-            max-width: 800px; 
+            max-width: 600px; 
             margin: 0 auto;
             background:linear-gradient(to right, transparent,rgb(204, 158, 248), transparent);
            background-repeat: no-repeat;
@@ -52,3 +53,12 @@
                 background-color: lightgray;
             }
         }
+
+    
+    /* Estilos para tablets */
+    @media screen and (max-width: 1024px) {
+    .menu {
+    display: block;
+    text-align: center;
+    }
+    }

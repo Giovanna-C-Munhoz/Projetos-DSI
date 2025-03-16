@@ -21,18 +21,18 @@
 
         .iniciar { 
             background: #f484f8; color: white; 
-            border: none
+            border:none;
 
         }
         .pausar {
             background: #af1bd0; color: white; 
-            border:none
+            border:none;
             
         }
         
         .resetar {
              background: #660277; color: white; 
-             border: none
+             border: none;
         }
 
         .container {
@@ -112,3 +112,12 @@
     }
 
 }
+
+
+    /* Estilos para tablets */
+    @media screen and (max-width: 1024px) {
+    .menu {
+    display: block;
+    text-align: center;
+    }
+    }
