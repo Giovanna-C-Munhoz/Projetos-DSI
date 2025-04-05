@@ -1,6 +1,6 @@
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: cursive;
             background-color:#48026a93;
             text-align: center;
             align-items: center;
@@ -8,7 +8,6 @@
             background-image: url('image/Purplebackground.png');
             background-size: cover;
             background-position: center;
-            background-color: #000;
             height: 100vh;
             margin: 0;
             position: relative;
@@ -70,11 +69,11 @@
             max-width: 800px;
             margin: 100px auto;
             padding: 10px;
-        
+            
         }
     
         .item {
-            width: 48%; /* Cada item ocupa 48% da largura */
+            width: 60%;
             background: rgb(227, 196, 255);
             padding: 20px;           
             border-radius: 5px;
@@ -83,7 +82,8 @@
         /* Em telas menores que 600px, os itens ocupam 100% da largura */
         @media screen and (max-width: 600px) {
             .item {
-                width: 100%;
+                width: 350px;
+                transition: transform 0.6s ease-in-out, top 0.1s ease-in-out;
             }
         }
 
@@ -94,7 +94,6 @@
     top: 50%;
     transform: translateY(-50%);
     background: linear-gradient(to top, rgb(245, 200, 270), transparent);
-    color: rgb(0, 0, 0);
     padding: 10px;
     border-radius: 5px;
     font-size: 18px;
@@ -120,4 +119,56 @@
     display: block;
     text-align: center;
     }
+    }
+
+    .banner {
+        position: fixed;
+        transform: translateY(-50%);
+        top: 65%;
+        right: -380px;
+        width: 70%;
+        height: 50vh;
+        background-image: url('image/imagemresponsivagrande.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: all 0.8s ease-in-out;
+        transition: all 0.8s ease-in;
+    }
+  
+
+    
+    @media screen and (max-width: 480px) {
+        .banner {
+            background-image: url('image/imagemresponsivapequena.png'); 
+            bottom: 10px;
+            left: 15%;
+            right: auto;
+            transform: translateX(-50%);
+            width: 300px;
+            transition-duration: unset;
+            transition: all 0.8s ease-in-out;
+        }
+    }
+    
+    
+    @media screen and (max-width: 640px) {
+        .banner {
+            background-image: url('image/imagemresponsivamedia.png');
+            transition: all 0.8s ease-in-out;
+            top: 350px;
+            right: 80px;
+            transform: translateY(-35%);
+        }
+    }
+
+     @media screen and (max-width: 1024px) {
+        .banner {
+            background-image: url('image/imagemresponsivagrande.png');
+            bottom: 10px;
+            width: 350px;
+            right: 180px;
+            transition-duration: unset;
+            transition: all 0.8s ease-in-out;
+            top: 330px;
+        }
     }

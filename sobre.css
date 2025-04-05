@@ -16,23 +16,15 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: cursive;
             background-color:#48026a93;
             text-align: center;
             justify-content: center;
             background-image: url('image/Purplebackground.png');
             background-size: cover;
             background-position: center;
-            background-color: #000;
             height: 100vh;
             margin: 0;
-        }
-        .container {
-            width: 100%;
-            max-width: 600px; 
-            margin: 0 auto;
-            background:linear-gradient(to right, transparent,rgb(204, 158, 248), transparent);
-           background-repeat: no-repeat;
         }
         
     
