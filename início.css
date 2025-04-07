@@ -155,7 +155,7 @@
         .banner {
             background-image: url('image/imagemresponsivamedia.png');
             transition: all 0.8s ease-in-out;
-            top: 350px;
+            top: 355px;
             right: 80px;
             transform: translateY(-35%);
         }
